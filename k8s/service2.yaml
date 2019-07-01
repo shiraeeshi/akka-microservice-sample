@@ -58,10 +58,8 @@ metadata:
   name: service2
 spec:
   ports:
-    - name: "http-api"
-      port: 8090
-      protocol: TCP
-      targetPort: 8090
+    - port: 8090
+      targetPort: "http-server"
   selector:
     app: service2
   type: LoadBalancer
