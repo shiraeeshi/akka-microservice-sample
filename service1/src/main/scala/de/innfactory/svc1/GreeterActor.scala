@@ -19,7 +19,8 @@ class GreeterActor extends Actor {
     case HelloRequest(from: String) => {
       val newCount = state.getOrElse(from, 0) + 1
 
-      state = state.filter(_._1 == from).+((from, newCount))
+      //state = state.filter(_._1 == from).+((from, newCount))
+      state = state.+((from, newCount))
       sender ! HelloReply(from, newCount)
     }
   }

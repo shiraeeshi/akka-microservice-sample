@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: service1
-          image: innfactory-test/service1:0.1
+          image: shiraeeshi/service1:0.2
           #health
           livenessProbe:
             httpGet:
